@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: 100vh;
+            margin: 0;
+            background: #1e1e1e;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .rectangle {
+            width: 20px;
+            height: 50px;
+            background: #ff6f61;
+            animation: riseAndSpin 5s ease-in-out infinite;
+        }
+        .rectangle:nth-child(2) {
+            background: #6fa8dc;
+            animation-delay: 0.4s;
+        }
+        .rectangle:nth-child(3) {
+            background: #93c47d;
+            animation-delay: 0.8s;
+        }
+        .rectangle:nth-child(4) {
+            background: #f6b26b;
+            animation-delay: 1.2s;
+        }
+        @keyframes riseAndSpin {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-350px) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+    </div>
+</body>
+</html>
